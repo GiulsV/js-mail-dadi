@@ -3,39 +3,48 @@
 // controlla che sia nella lista di chi può accedere,
 // stampa un messaggio appropriato sull’esito del controllo.
 
-var utentiAutorizzati, utentiAutorizzatiLen, inputEmail, emailValue, esitoValidazione, messaggioUtente, messaggioUtente, i, iesimoUtenteAutorizzato;
+// DA RIVEDERE DEVE STAMPARE A VIDEO NON IN CONSOLE
 
-function validatoreEmail() {   
+// 1. Creazione array email
 
-    // Creazione array email  
-    utentiAutorizzati = ['utente0@gmail.com' , 'utente1@gmail.com', 'utente2@gmail.com', 'utente3@gmail.com', 'utente4@gmail.com', 'utente5@gmail.com'];
-    //console.log(utentiAutorizzati);
-    //console.log(utentiAutorizzati.length);
+const listaMail = ['utente0@gmail.com' , 'utente1@gmail.com', 'utente2@gmail.com', 'utente3@gmail.com', 'utente4@gmail.com', 'utente5@gmail.com'];
 
-    utentiAutorizzatiLen = utentiAutorizzati.length;
 
-    inputEmail = document.getElementById("input_email");
-    emailValue = inputEmail.value;
-    //console.log(emailValue);
+// 2. Chiedo di inserire la mail
 
-    esitoValidazione = document.getElementById("esito_validazione");
+const checkMail = prompt('Inserisci la tua email');
+let mail = false;
 
-    // Controllo che l'email è presente nell'array
+// 3. Controllo che l'email è presente nell'array
 
-    for(var i = 0; i < utentiAutorizzatiLen; ++i) {
+for (var i = 0; i < listaMail.length; i++) {
+    
+    var lista = listaMail[i];
 
-        iesimoUtenteAutorizzato = utentiAutorizzati[i];
-
-        if (iesimoUtenteAutorizzato === emailValue) {
-            messaggioUtente = "Utente Autorizzato";
-            esitoValidazione.innerHTML = messaggioUtente;
-            console.log(messaggioUtente);
-            break;
-        } else {
-            messaggioUtente = "Utente Non Autorizzato";
-            esitoValidazione.innerHTML = messaggioUtente;
-            console.log(esitoValidazione);
-        }
+    if(lista == checkMail){
+      mail = true;
+      document.getElementById('email').innerHTML = "L'email inserita è: " + checkMail;
+    //   console.log(mail);
+    //   console.log(lista);
+    }else{
         
+        document.getElementById('email').innerHTML = "L'email inserita è: " + checkMail;
+        // console.log(mail);
     }
+}
+
+// 4. Se è presente accede altrimenti no
+
+if (mail == true){
+
+    document.getElementById('text').innerHTML= "Email riconosciuta, puoi accedere";
+
+    // console.log(mail);
+
+}else{
+
+    document.getElementById('text').innerHTML= "Email non riconosciuta, non puoi accedere";
+
+    // console.log(mail);
+
 }
