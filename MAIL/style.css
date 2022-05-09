@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+  
+body {
+    height: 100vh;
+    background-color:#3b5998;
+    color: white;
+}
+  
+#validatore_acesso_email {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.email_box {
+    min-height: 300px;
+    min-width: 400px;
+    text-align: center;
+    padding: 60px 40px;
+    border-radius: 10px;
+}
+  
+ul {
+    list-style: none;
+}
+  
+ul>li {
+    text-align: left;
+    font-size: 22px;
+    margin: 20px 10px;
+}
+  
+input[type=text] {
+    font-size: 30px;
+    height: 40px;
+    border-radius: 5px;
+    border: transparent;
+}
+  
+input[type=submit] {
+    width: 10%;
+    height: 40px;
+    color: #334046;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    border: transparent;
+    background-color: rgba(179, 221, 221, 0.911);
+    border-radius: 8px;
+}

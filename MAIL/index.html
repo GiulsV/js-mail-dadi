@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Mail</title>
 </head>
 <body>
     <main>
-        <p id="email"></p>
-        <p id="text"></p>
+        <form action="#">
+            <ul>
+              <li><input type="text" id="input_email" value="" title="accesso limitato"></li>
+              <li class="submit"><input type="submit" name="submit" value="Accedi" onclick="validatoreEmail()" /></li>
+              <li><span id="esito_validazione"></span></li>
+            </ul>
+          </form>
+
     </main>
     <script src="script.js"></script>
 </body>
