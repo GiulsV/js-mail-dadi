@@ -23,23 +23,28 @@ for (var i = 0; i < listaMail.length; i++) {
 
     if(lista == checkMail){
       mail = true;
-      console.log(mail);
-      console.log(lista);
+      document.getElementById('email').innerHTML = "L'email inserita è: " + checkMail;
+    //   console.log(mail);
+    //   console.log(lista);
     }else{
-        console.log(mail);
+        
+        document.getElementById('email').innerHTML = "L'email inserita è: " + checkMail;
+        // console.log(mail);
     }
 }
 
 // 4. Se è presente accede altrimenti no
 
 if (mail == true){
-    
-    alert('Email riconosciuta, puoi accedere');
-    console.log(mail);
+
+    document.getElementById('text').innerHTML= "Email riconosciuta, puoi accedere";
+
+    // console.log(mail);
 
 }else{
-    
-    alert('Email non riconosciuta, non puoi accedere');
-    console.log(mail);
+
+    document.getElementById('text').innerHTML= "Email non riconosciuta, non puoi accedere";
+
+    // console.log(mail);
 
 }
