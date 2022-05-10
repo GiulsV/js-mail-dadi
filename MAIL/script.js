@@ -17,22 +17,19 @@ let mail = false;
 
 // 3. Controllo che l'email è presente nell'array
 
-for (var i = 0; i < listaMail.length; i++) {
+for (let i = 0; i < listaMail.length; i++) {
     
-    var lista = listaMail[i];
+    let lista = listaMail[i];
 
     if(lista == checkMail){
       mail = true;
-      document.getElementById('email').innerHTML = "L'email inserita è: " + checkMail;
+     
     //   console.log(mail);
     //   console.log(lista);
-    }else{
-        
-        document.getElementById('email').innerHTML = "L'email inserita è: " + checkMail;
-        // console.log(mail);
     }
 }
 
+ document.getElementById('email').innerHTML = "L'email inserita è: " + checkMail;
 // 4. Se è presente accede altrimenti no
 
 if (mail == true){
